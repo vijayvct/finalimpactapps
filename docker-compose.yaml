@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  frontend:
+    image: 'myangularapp'
+    container_name: frontend
+    ports:
+      - '3001:9999'
+    depends_on:
+      - restapi
+  
+  restapi:
+    image: 'mywebapi'
+    container_name: restapi
+    ports:
+      - '3000:3000'    
